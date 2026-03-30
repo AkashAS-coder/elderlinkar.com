@@ -1,3 +1,300 @@
-<html>
-<p> Support Page </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ElderLink AR – Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #2e8fcf;
+      --blue-dark: #1e6fa8;
+      --green: #3ab26a;
+      --bg: #f4f8fc;
+      --card: #ffffff;
+      --text: #1a2d3d;
+      --muted: #5a7a90;
+      --border: #dce8f0;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: #0d1b26;
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    header img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      border-radius: 14px;
+    }
+
+    header .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header .brand span:first-child {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    header .brand span:last-child {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0d1b26 0%, #1a3a55 100%);
+      color: white;
+      text-align: center;
+      padding: 64px 24px 72px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 span { color: var(--green); }
+
+    .hero p {
+      font-size: 17px;
+      color: #a8c4d8;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* SECTION LABEL */
+    .section-label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 20px;
+    }
+
+    /* FAQ */
+    .faq { margin-bottom: 56px; }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 18px 22px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 22px;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-item .answer {
+      padding: 0 22px 18px;
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 40px 36px;
+      text-align: center;
+    }
+
+    .contact-card .icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .contact-card .icon svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
+
+    .contact-card h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .contact-card a.email-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      color: white;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+
+    .contact-card a.email-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .contact-card .response-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #a0b8c8;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1b26;
+      color: #4a6a80;
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+    }
+
+    footer a { color: var(--blue); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="elderlink_app_icon_1024.png" alt="ElderLink AR logo"/>
+  <div class="brand">
+    <span>ElderLink AR</span>
+    <span>Support Center</span>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>How can we <span>help you?</span></h1>
+  <p>Find answers to common questions or reach out directly — we're here to make sure ElderLink AR works perfectly for you and your loved ones.</p>
+</div>
+
+<main>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <p class="section-label">Frequently Asked Questions</p>
+
+    <details class="faq-item">
+      <summary>What is ElderLink AR?</summary>
+      <div class="answer">ElderLink AR is an augmented reality app designed to help caregivers and family members stay connected with elderly loved ones. It provides real-time health monitoring, medication reminders, and easy video communication — all through an intuitive AR interface.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What devices is ElderLink AR compatible with?</summary>
+      <div class="answer">ElderLink AR supports iOS devices with AR capabilities. For the best experience, we recommend a device running iOS 14+</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I set up the app for the first time?</summary>
+      <div class="answer">After downloading the app, create an account and follow the in-app setup guide. You'll be prompted to add a loved one's profile, connect any health devices, and configure notification preferences. The process takes about 5 minutes.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is my data private and secure?</summary>
+      <div class="answer">Absolutely. All personal and health data is encrypted in transit and at rest. We do not sell or share your information with third parties. You remain in full control of your data at all times.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>The AR features aren't working — what should I do?</summary>
+      <div class="answer">Make sure the app has permission to access your camera. Go to your device Settings → Apps → ElderLink AR → Permissions and enable Camera. If the issue persists, try restarting the app or reinstalling it.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I reset my password?</summary>
+      <div class="answer">On the login screen, tap "Forgot Password?" and enter your registered email address. You'll receive a reset link within a few minutes. Check your spam folder if you don't see it in your inbox.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I delete my account?</summary>
+      <div class="answer">To delete your account and all associated data, go to Settings → Account → Delete Account within the app. Alternatively, email us and we'll process your request within 48 hours.</div>
+    </details>
+  </div>
+
+  <!-- Contact -->
+  <p class="section-label">Contact Support</p>
+  <div class="contact-card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </div>
+    <h2>Still need help?</h2>
+    <p>Our support team is ready to assist you. Send us an email and we'll get back to you as soon as possible.</p>
+    <a class="email-btn" href="mailto:akashdeveloper101@gmail.com">akashdeveloper101@gmail.com</a>
+    <p class="response-note">⏱ Typical response time: within 24–48 hours</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 ElderLink AR. All rights reserved. &nbsp;·&nbsp; <a href="mailto:akashdeveloper101@gmail.com">Contact Us</a></p>
+</footer>
+
+</body>
 </html>
